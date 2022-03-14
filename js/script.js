@@ -239,11 +239,11 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 15,
         },
         767: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30,
         },
         992: {

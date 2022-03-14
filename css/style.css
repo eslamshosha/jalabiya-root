@@ -1450,6 +1450,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
 }
 @media (max-width: 991px) {
+  header{/*to fix search lag*/
+    overflow: hidden;
+  }
   .nav-header {
     padding: 10px 0;
     flex-wrap: wrap;
