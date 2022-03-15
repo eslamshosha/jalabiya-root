@@ -1,7 +1,7 @@
 
 $(window).load(function () {
-  $(".preloader").slideUp();
-  $("body").removeClass("overflow");
+  $(".preloader").fadeOut();
+  // $("body").removeClass("overflow");
 });
 
 $(document).ready(function () {
