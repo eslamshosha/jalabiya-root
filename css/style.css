@@ -434,6 +434,11 @@ html[dir="rtl"] .add-to .dropdown-content {
   outline: none;
   transition: all 0.3s ease-in-out;
 }
+.fixed-nav .search-section .search-input{
+  background-color: var(--white-color);
+  border: 2px solid var(--white-color);
+}
+.fixed-nav .search-section .search-input:focus,
 .search-input:focus {
   border: 2px solid var(--main-hover);
   color: #212121;
@@ -473,14 +478,17 @@ html[dir="rtl"] .search-button {
   left: 4px;
   transform: translateY(-50%) scaleX(-1);
 }
+html[dir="rtl"] .open-search{
+  transform: scaleX(-1);
+}
 .open-search::after {
   content: "";
   font-family: "Line Awesome Free";
   font-weight: 700;
 }
-.close-search {
+/* .close-search {
   z-index: 99;
-}
+} */
 .open-bars::after {
   content: "";
   font-family: "line Awesome Free";
@@ -491,7 +499,13 @@ html[dir="rtl"] .search-button {
   content: "";
   font-family: "Line Awesome Free";
   font-weight: 700;
-  color: var(--main-hover);
+  color: #ffffff6b;
+}
+.overlay-box .fixed-search{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .close-bars::after {
   content: "";
@@ -1461,6 +1475,15 @@ html[dir="rtl"] .footer-accordion.active:after {
   nav li .cat-anchor {
     font-size: 13px;
   }
+  .top-header .big-menu li {
+    margin: 0 3px;
+  }
+  .top-header .big-menu .cat-anchor {
+    font-size: 10px;
+  }
+  .top-header .big-menu{
+    padding: 15px 0;
+  }
 }
 @media (max-width: 991px) {
   header {
@@ -1586,7 +1609,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     align-items: baseline;
   }
   .big-menu > li {
-    padding: 5px 0;
+    padding: 10px 0;
   }
   nav .cat-li {
     margin: 0 0;
@@ -1610,7 +1633,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   .nav-head .dropdown-content,
   .big-menu .dropdown-content {
     background-color: transparent;
-    text-align: left;
+    text-align: start;
     min-width: 100%;
     padding: 10px 0 0;
     padding-inline-start: 10px;
@@ -1794,8 +1817,8 @@ html[dir="rtl"] .footer-accordion.active:after {
   height: 100%;
   cursor: pointer;
   z-index: 10;
-  background-color: #000;
-  opacity: 0.4;
+  background-color: #8b173c;
+  opacity: 0.95;
   display: none;
 }
 /* .overlay-box {
